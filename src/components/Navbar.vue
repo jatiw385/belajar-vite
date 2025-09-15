@@ -1,6 +1,6 @@
 <template>
-    <nav class="flex justify-between">
-        <div class="flex justify-center items-center">
+    <nav class="flex justify-between px-5 ">
+        <div class="flex gap-10 justify-center items-center ">
             <img src="../assets/menu.svg" alt="">
             <img src="../assets/bur.svg" alt="">
         </div>

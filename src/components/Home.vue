@@ -1,5 +1,5 @@
 <template>
-    <h1>
-        Home page
-    </h1>
+    <div class="w-screen h-96" style="background-image: url('../assets/model.jpg')">
+        
+    </div>
 </template>
