@@ -4,7 +4,7 @@
             
             <img src="../assets/bur.svg" alt="">
         </div>
-        <div class="flex gap-10 text-white items-center font-bold">
+        <div class="flex gap-10 text-gray items-center font-bold">
             <div>
                 Beauty
             </div>
@@ -15,7 +15,7 @@
                 Furniture
             </div>
         </div>
-        <div class="text-white">
+        <div class="text-gray">
             <div class="flex gap-2">
                 <span class="material-symbols-outlined">favorite</span>
                 <span class="material-symbols-outlined">language</span>
