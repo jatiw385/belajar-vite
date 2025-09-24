@@ -5,9 +5,9 @@
             <img src="../assets/bur.svg" alt="">
         </div>
         <div class="flex gap-10 text-gray items-center font-bold">
-            <div>
+            <router-link to="/beauty">
                 Beauty
-            </div>
+            </router-link>
             <div>
                 Fragrances
             </div>
@@ -22,7 +22,7 @@
                 <span class="material-symbols-outlined">shopping_cart</span>
             </div>
             <div class="flex gap-1.5">
-                <a href="">Home</a>
+                <router-link to="/">Home</router-link>
                 <a href="">Bantuan</a>
                 <a href="">Search</a>
             </div>
