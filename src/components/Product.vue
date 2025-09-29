@@ -1,4 +1,10 @@
+<script setup>
+    import Loading from './Loading.vue';
+</script>
 <template>
+    <div class="fixed w-screen h-screen" id="loading">
+        <Loading/>
+    </div>
     <div class="text-black pt-32 pl-4">
         <h1 class="text-4xl font-bold">{{ category }}</h1>
         <p>Ini adalah Product {{ category }}</p>
@@ -26,7 +32,6 @@
 
 <script>
 import axios from 'axios';
-
 export default {
     data() {
         return {
@@ -48,6 +53,8 @@ export default {
                 const res = await axios.get(`https://dummyjson.com/products/category/${category}`);
                 console.log(res.data.products);
                 this.products = res.data.products;
+                const loading = document.getElementById('loading');
+                loading.classList.add('hidden')
             } catch (error){
                 console.log(error);
             }    
