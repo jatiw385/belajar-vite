@@ -1,7 +1,7 @@
 <template>
     <div class="text-black pt-32 pl-4">
-        <h1 class="text-4xl font-bold">Beauty</h1>
-        <p>Ini adalah Product Beauty</p>
+        <h1 class="text-4xl font-bold">{{ category }}</h1>
+        <p>Ini adalah Product {{ category }}</p>
     </div>
     <div>
         <div class="grid grid-cols-4 gap-10 px-20 mt-10">
@@ -31,15 +31,21 @@ export default {
     data() {
         return {
             products : [],
+            category : ''
         }
     },
     mounted() {
         this.fetchProducts()
     },
+    watch : {
+        '$route.params.categories': 'tetchProduct'
+    },
     methods : {
         async fetchProducts(){
+            const category= this.$route.params.categories
+            this.category=category
             try {
-                const res = await axios.get('https://dummyjson.com/products/category/beauty');
+                const res = await axios.get(`https://dummyjson.com/products/category/${category}`);
                 console.log(res.data.products);
                 this.products = res.data.products;
             } catch (error){

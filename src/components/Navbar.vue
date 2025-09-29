@@ -5,15 +5,15 @@
             <img src="../assets/bur.svg" alt="">
         </div>
         <div class="flex gap-10 text-gray items-center font-bold">
-            <router-link to="/beauty">
+            <router-link to="/product/beauty">
                 Beauty
             </router-link>
-            <div>
+            <router-link to="/product/fragrances">
                 Fragrances
-            </div>
-            <div>
+            </router-link>
+            <router-link to="/product/furniture">
                 Furniture
-            </div>
+            </router-link>
         </div>
         <div class="text-gray">
             <div class="flex gap-2">

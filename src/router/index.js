@@ -4,7 +4,7 @@ import Product from "../components/product.vue";
 
 const routes = [
     {path : '/', name : 'Home', component : Home},
-    {path : '/beauty', name : 'Beauty', component : Product}
+    {path : '/product/:categories', name : 'Beauty', component : Product}
 ];
 
 const router = createRouter({
