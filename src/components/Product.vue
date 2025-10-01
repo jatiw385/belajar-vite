@@ -43,17 +43,19 @@ export default {
         this.fetchProducts()
     },
     watch : {
-        '$route.params.categories': 'tetchProduct'
+        '$route.params.categories': 'fetchProducts'
     },
     methods : {
         async fetchProducts(){
             const category= this.$route.params.categories
+            console.log(category)
             this.category=category
+            const loading = document.getElementById('loading');
+            loading.classList.remove('hidden')
             try {
                 const res = await axios.get(`https://dummyjson.com/products/category/${category}`);
                 console.log(res.data.products);
                 this.products = res.data.products;
-                const loading = document.getElementById('loading');
                 loading.classList.add('hidden')
             } catch (error){
                 console.log(error);
