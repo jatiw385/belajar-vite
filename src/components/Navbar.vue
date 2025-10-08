@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex fixed w-screen justify-between px-5 pt-5 ">
+    <nav class="flex absolute w-screen justify-between px-5 pt-5 ">
         <div class="flex gap-10 justify-center items-center   ">
             
             <img src="../assets/bur.svg" alt="">
