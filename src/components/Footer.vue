@@ -1,10 +1,10 @@
 <template>
-    <div class="h-14 w-full flex justify-between px-5">
+    <div class="h-fit w-full flex justify-between px-5  bg-gray-300 pt-5 ">
         <div>
             <img src="../assets/bur.svg" alt="">
         </div>
         
-        <div class="flex gap-5">
+        <div class="flex gap-5 ">
             <div>
                 <h1 class="font-bold">Layanan</h1>
                 <p>Informasi</p>

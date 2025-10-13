@@ -5,14 +5,14 @@
     <div class="fixed w-screen h-screen" id="loading">
         <Loading/>
     </div>
-    <div class="text-black pt-32 pl-4">
+    <div class="text-black pt-32 pl-32 ">
         <h1 class="text-4xl font-bold">{{ category }}</h1>
         <p>Ini adalah Product {{ category }}</p>
     </div>
-    <div>
-        <div class="grid grid-cols-4 gap-10 px-20 mt-10">
+    <div class="w-full justify-center items-center flex mb-28">
+        <div class="grid grid-cols-4 gap-10 px-20 mt-10 w-11/12 ">
             <div v-for="product in products" :key="product.id">
-                <div class="bg-gray-300 w-fit h-fit"> 
+                <div class="bg-gray-300 w-64 h-72"> 
                     <img class="h-60 " :src="product.thumbnail" alt="">
                 </div>
                 <div class="flex flex-col gap-2">
