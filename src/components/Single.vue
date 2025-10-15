@@ -5,13 +5,14 @@
         </div>
         <div>
             <div class="text-3xl">
-                <h1>Kemeja Flannel Lembut Kerah Skipper |Lengan Panjang</h1>
+                <h1>{{ product.title }}</h1>
             </div>
             <div class="flex gap-40 mt-20">
                 <div class="text-2xl">
-                    <h2>Rp200.000</h2>
+                    <h2>${{ product.price }}</h2>
                 </div>
                 <div class="flex justify-center items-center">
+                    <div v-for=" i in product.rating"></div>
                     <span class="material-symbols-outlined">star</span>
                     <span class="material-symbols-outlined">star</span>
                     <span class="material-symbols-outlined">star</span>
@@ -35,3 +36,28 @@
         </div>
     </div>
 </template>
+<script>
+    import axios from 'axios';
+    export default {
+        data() {
+            return {
+                product:{}
+            }
+        },
+        mounted() {
+        this.fetchProduct()
+        },
+        methods: {
+            async fetchProduct(){
+                try {
+                    const res = await axios.get('https://dummyjson.com/products/1');
+                    console.log(res.data);
+                    this.product = res.data
+                } catch (error){
+                    console.log(error);
+                }
+            }
+        }
+    }
+    
+</script>
